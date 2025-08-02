@@ -53,6 +53,14 @@ namespace eval c {
     proc include {header} {
         _out #include " " $header \n\n
     }
+
+    proc int {name {value 0}} {
+        variable compiler 
+        _indent
+        _out "int $name "
+        puts "TODO"
+        exit
+    }
 }
 
 c::include <stdio.h>
